@@ -1,4 +1,7 @@
-const required_envs: string[] = [];
+const required_envs: string[] = [
+  "DATABASE_URL",
+  "LITELLM_MASTER_KEY",
+];
 
 export const from_env = (strings: TemplateStringsArray, ...args: string[]) => {
   const full_text = strings.reduce((acc, str, index) => {
