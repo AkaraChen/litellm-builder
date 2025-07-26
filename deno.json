@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "@deno-lib/logger": "jsr:@deno-lib/logger@^1.1.9",
+    "@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@^1.39.8",
+    "@std/yaml": "jsr:@std/yaml@^1.0.9",
+    "@/": "./src/"
+  },
+  "tasks": {
+    "build": "deno run --allow-read --allow-write --allow-env --allow-net src/index.ts",
+    "start:dev": "uv run litellm -c config.yaml --detailed_debug"
+  }
+}
