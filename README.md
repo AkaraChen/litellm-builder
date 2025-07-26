@@ -69,7 +69,7 @@ Here's how you go from code to a fully configured gateway in 4 simple steps:
 
 -   🧠 **Type-Safe**: Catch configuration errors in your editor, not in production.
 -   🧩 **Modular**: No more giant YAML! Organize providers into clean, reusable modules.
--   ✨ **Smart Env Handling**: The `from_env` helper automatically tracks needed environment variables for you.
+-   ✨ **Auto-generates `.env.example`**: Never forget an environment variable again.
 -   ⚙️ **Dynamic**: Need different configs for dev vs. prod? Just use an `if` statement. It's that simple.
 
 ## Contributing 🤝
