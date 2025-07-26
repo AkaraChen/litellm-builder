@@ -1,4 +1,4 @@
-const envs: string[] = [];
+const required_envs: string[] = [];
 
 export const from_env = (strings: TemplateStringsArray, ...args: string[]) => {
   const full_text = strings.reduce((acc, str, index) => {
@@ -7,8 +7,8 @@ export const from_env = (strings: TemplateStringsArray, ...args: string[]) => {
     }
     return acc + str;
   }, "").toUpperCase();
-  envs.push(full_text);
+  required_envs.push(full_text);
   return `os.environ/${full_text}`;
 };
 
-export const required_envs = () => envs;
+export const get_required_envs = () => required_envs;
