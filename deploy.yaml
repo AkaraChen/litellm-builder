@@ -1,0 +1,31 @@
+---
+- name: Deploy LiteLLM Builder
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Ensure deployment directory exists
+      ansible.builtin.file:
+        path: /opt/litellm_gateway
+        state: directory
+        mode: '0755'
+
+    - name: Copy config.yaml to remote host
+      ansible.builtin.copy:
+        src: ./config.yaml
+        dest: /opt/litellm_gateway/config.yaml
+
+    - name: Copy compose.yaml to remote host
+      ansible.builtin.copy:
+        src: ./compose.yaml
+        dest: /opt/litellm_gateway/compose.yaml
+
+    - name: Run docker compose up
+      community.docker.docker_compose_v2:
+        project_src: /opt/litellm_gateway
+        state: present # Ensures the services are running, 'absent' would stop them
+      register: output
+
+    - name: Show docker compose output
+      ansible.builtin.debug:
+        var: output 

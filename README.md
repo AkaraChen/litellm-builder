@@ -55,15 +55,9 @@ Here's how you go from code to a fully configured gateway in 4 simple steps:
     -   `config.yaml`: Your complete LiteLLM configuration.
     -   `.env.example`: A perfect list of all required environment variables.
 
-    Just create a `.env` from the example, add your secrets, and you're ready to launch!
+    Now, just create a `.env` file based on the example, add your secrets, and you're ready to spin up your gateway with `docker-compose up`!
 
-    ```bash
-    # Start in dev mode
-    deno task start:dev
-
-    # Or run with Docker for production
-    docker-compose up
-    ```
+    For automated deployments, see our [**Ansible Deployment Guide**](./docs/deployment-with-ansible.md).
 
 ## Why Use This? 🤔
 

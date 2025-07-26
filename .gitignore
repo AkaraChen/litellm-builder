@@ -16,3 +16,6 @@ config/
 # dotenv
 .env
 .env.example
+
+# ansible
+hosts

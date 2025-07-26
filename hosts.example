@@ -1,0 +1,13 @@
+# This is an example inventory file for Ansible.
+#
+# How to use:
+# 1. Copy this file to a new file named `hosts`
+#    cp hosts.example hosts
+#
+# 2. Replace the placeholder with your server's IP address or domain name.
+#
+# 3. Run the playbook with this inventory file:
+#    ansible-playbook -i hosts deploy.yaml
+
+[litellm_servers]
+your_server_ip ansible_user=your_username ansible_ssh_private_key_file=~/.ssh/your_private_key 
