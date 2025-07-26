@@ -1,4 +1,4 @@
-import { ModelMapping } from "../types.ts";
+import { ModelMapping } from "@/types/index.ts";
 
 export enum DeepseekModel {
   "deepseek-chat" = "deepseek-chat",

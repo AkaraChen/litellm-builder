@@ -1,5 +1,5 @@
-import { openai_models } from "../models/openai.ts";
-import { Provider } from "../types.ts";
+import { openai_models } from "@/models/openai.ts";
+import { Provider } from "@/types/index.ts";
 
 interface OpenAICompatParams {
   name: string;

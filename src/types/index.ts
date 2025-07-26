@@ -1,3 +1,5 @@
+import { Settings } from "./settings.ts";
+
 export type ModelMapping = Record<string, string>;
 
 export type Provider = {
@@ -18,13 +20,6 @@ export type Model = {
 };
 
 export type ModelList = Model[];
-
-export type Settings = {
-  litellm_settings?: {
-    drop_params?: boolean;
-  };
-};
-
 export type Config = {
   model_list: ModelList;
 } & Settings;

@@ -1,4 +1,4 @@
-import { Provider } from "../types.ts";
+import { Provider } from "@/types/index.ts";
 import { OpenAICompat } from "./openai-compat.ts";
 
 interface GeminiParams extends Pick<Provider, "api_keys" | "model_mapping"> {

@@ -1,4 +1,5 @@
-import { Config, ModelList, Provider, Settings } from "./types.ts";
+import { Config, ModelList, Provider } from "./types/index.ts";
+import { Settings } from "./types/settings.ts";
 
 type BuildConfigParams = {
   providers: Provider[];
