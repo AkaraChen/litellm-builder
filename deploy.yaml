@@ -8,7 +8,7 @@
       ansible.builtin.file:
         path: /opt/litellm_gateway
         state: directory
-        mode: '0755'
+        mode: "0755"
 
     - name: Copy config.yaml to remote host
       ansible.builtin.copy:
@@ -28,4 +28,4 @@
 
     - name: Show docker compose output
       ansible.builtin.debug:
-        var: output 
+        var: output

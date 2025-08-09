@@ -8,5 +8,14 @@
   "tasks": {
     "build": "deno run --allow-read --allow-write --allow-env --allow-net src/index.ts",
     "start:dev": "uv run litellm -c config.yaml --detailed_debug"
+  },
+  "fmt": {
+    "include": [
+      "config/**/*.ts",
+      "src/**/*.ts",
+      "config-example/**/*.ts",
+      "**/*.md",
+      "**/*.yaml"
+    ]
   }
 }
