@@ -9,6 +9,9 @@ export enum AnthropicModel {
   // 4.0
   "claude-opus-4-0" = "claude-opus-4-0",
   "claude-sonnet-4-0" = "claude-sonnet-4-0",
+
+  // 4.1
+  "claude-opus-4-1" = "claude-opus-4-1",
 }
 
 export const anthropic_models = Object.values(AnthropicModel);

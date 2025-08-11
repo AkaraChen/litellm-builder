@@ -1,4 +1,4 @@
-import { Config, ModelList, Provider } from "./types/index.ts";
+import { Config, Model, ModelList, Provider } from "./types/index.ts";
 import { Settings } from "./types/settings.ts";
 
 type BuildConfigParams = {
@@ -24,7 +24,11 @@ export const build_config = (
           api_base: provider.api_base,
           api_key,
         },
-      }));
+        model_info: {
+          key: model_name,
+          litellm_provider: provider.litellm_provider
+        }
+      } as Model));
     });
   });
   return {

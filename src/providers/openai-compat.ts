@@ -13,8 +13,8 @@ export class OpenAICompat implements Provider {
   name: string;
   api_keys: string[];
   api_base: string;
+  litellm_provider = "openai";
   model_mapping: Record<string, string>;
-  type = "openai" as const;
   constructor(params: OpenAICompatParams) {
     const {
       name,
@@ -30,11 +30,5 @@ export class OpenAICompat implements Provider {
     models.map((model) => {
       this.model_mapping[model] = model;
     });
-    this.model_mapping = Object.fromEntries(
-      Object.entries(this.model_mapping).map(([key, value]) => [
-        `openai/${key}`,
-        value,
-      ]),
-    );
   }
 }
